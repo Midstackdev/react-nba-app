@@ -6,7 +6,6 @@ import { URL } from '../../../config'
 import style from './newslist.module.css'
 
 import Button from '../buttons'
-import cardInfo from '../cardInfo'
 import CardInfo from '../cardInfo'
 
 class NewsList extends Component {
@@ -64,7 +63,7 @@ class NewsList extends Component {
                     >
                         <div key={i}>
                             <div className={style.news_list_item}>
-                                <Link to={`/article/${item.id}`}>
+                                <Link to={`/articles/${item.id}`}>
                                     <CardInfo 
                                         teams={this.state.teams}
                                         team={item.team}
