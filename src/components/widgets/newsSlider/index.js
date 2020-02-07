@@ -18,12 +18,6 @@ class NewsSlider extends Component {
                 news
             })
         })
-        // axios.get(`${URL}/articles?_start=${this.props.start}&_end=${this.props.amount}`)
-        // .then((response) => {
-        //     this.setState({
-        //         news: response.data
-        //     })
-        // })
     }
 
     render () {
