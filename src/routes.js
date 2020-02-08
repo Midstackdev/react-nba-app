@@ -9,22 +9,21 @@ import NewsMain from './components/articles/news/main'
 import VideosMain from './components/articles/videos/main'
 import SignIn from './components/signin'
 
-class Routes extends Component {
-    render () {
-        console.log(this.props)
-        return (
-            <Layout>
-                <Switch>
-                    <Route path="/" exact component={Home}/>
-                    <Route path="/news" exact component={NewsMain}/>
-                    <Route path="/videos" exact component={VideosMain}/>
-                    <Route path="/articles/:id" exact component={NewsArticle}/>
-                    <Route path="/videos/:id" exact component={VideoArticle}/>
-                    <Route path="/sign-in" exact component={SignIn}/>
-                </Switch>
-            </Layout>     
-        )
-    }
+const Routes = (props) =>  {
+
+    return (
+        <Layout user={props.user}>
+            <Switch>
+                <Route path="/" exact component={Home}/>
+                <Route path="/news" exact component={NewsMain}/>
+                <Route path="/videos" exact component={VideosMain}/>
+                <Route path="/articles/:id" exact component={NewsArticle}/>
+                <Route path="/videos/:id" exact component={VideoArticle}/>
+                <Route path="/sign-in" exact component={SignIn}/>
+            </Switch>
+        </Layout>     
+    )
+    
 }
 
 export default Routes
