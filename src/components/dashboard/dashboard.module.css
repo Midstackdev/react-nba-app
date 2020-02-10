@@ -27,3 +27,8 @@
     color: #fff;
     margin-top: 10px;
 }
+
+.post_container select {
+    font-size: 20px;
+    margin-top: 10px;
+}
